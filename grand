@@ -1,0 +1,26 @@
+result = []
+a=int(input())
+b=int(input())
+
+def divider():
+    if a < b:
+        raise ValueError
+    if b > 100:
+        raise IndexError
+    return a / b
+
+try:
+        if (type(a) != type(b)):
+            raise TypeError("Должны быть числами.")
+        elif (b==0):
+            raise ZeroDivisionError("на ноль делить нельзя")
+        else:
+            res = a/b
+            result.append(res)
+            
+except ZeroDivisionError as e:
+        print("Ошибка: деление на ноль")
+except TypeError as te:
+        print("Ошибка типа")
+
+print(result)
